@@ -1,0 +1,47 @@
+{
+  "name": "xsolve-pl/salesforce-client",
+  "description": "Salesforce REST client for PHP",
+  "keywords": [
+    "crm",
+    "tripletex",
+    "invoice",
+    "rest",
+    "api"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "homepage": "https://github.com/zaporylie/php-tripletex",
+  "authors": [
+    {
+      "name": "Jakub Piasecki",
+      "email": "jakub@piaseccy.pl",
+      "homepage": "https://github.com/zaporylie",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "jms/serializer": "~1.4",
+    "eloquent/enumeration": "^5.1",
+    "php-http/httplug": "^1.1",
+    "php-http/client-implementation": "^1.0"
+  },
+  "require-dev": {
+    "php-http/guzzle6-adapter": "^1.0",
+    "phpunit/phpunit": "5.5.*",
+    "friendsofphp/php-cs-fixer": "^2.0"
+  },
+  "suggest": {
+    "php-http/guzzle6-adapter": "Guzzle adapter"
+  },
+  "autoload":{
+    "psr-4":{
+      "zaporylie\\Tripletex\\": "src/"
+    }
+  },
+  "autoload-dev":{
+    "psr-4":{
+      "zaporylie\\Tripletex\\": ["src/", "tests/"]
+    }
+  }
+}
