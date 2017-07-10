@@ -1,8 +1,11 @@
 <?php
 
-namespace zaporylie\Tripletex\Model;
+namespace zaporylie\Tripletex\Model\Product;
 
-use zaporylie\Tripletex\ModelInterface;
+use zaporylie\Tripletex\Model\ModelInterface;
+use zaporylie\Tripletex\Model\IdTrait;
+use zaporylie\Tripletex\Model\RevisionTrait;
+use zaporylie\Tripletex\Model\UrlTrait;
 
 class Product implements ModelInterface
 {
