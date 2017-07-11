@@ -31,6 +31,11 @@ class TripletexClient
     protected $sessionToken;
 
     /**
+     * @var int
+     */
+    protected $companyId;
+
+    /**
      * TripletexClient constructor.
      *
      * @param array $options
@@ -39,6 +44,7 @@ class TripletexClient
     {
         $this->setHttpClient(isset($options['http_client']) ? $options['http_client'] : null);
         $this->setSessionToken(isset($options['session_token']) ? $options['session_token'] : null);
+        $this->setCompanyId(isset($options['company_id']) ? $options['company_id'] : 0);
     }
 
     /**
@@ -89,6 +95,29 @@ class TripletexClient
     public function setSessionToken($sessionToken)
     {
         $this->sessionToken = $sessionToken;
+        return $this;
+    }
+
+    /**
+     * Gets companyId value.
+     *
+     * @return int
+     */
+    public function getCompanyId()
+    {
+        return $this->companyId;
+    }
+
+    /**
+     * Sets companyId variable.
+     *
+     * @param int $companyId
+     *
+     * @return $this
+     */
+    public function setCompanyId($companyId)
+    {
+        $this->companyId = $companyId;
         return $this;
     }
 

@@ -58,7 +58,7 @@ abstract class ResourceBase implements ResourceInterface
     {
         $trusted_request = $request->withAddedHeader(
             'Authorization',
-            'Basic '.$this->app->getClient()->getSessionToken()
+            'Basic '.base64_encode($this->app->getClient()->getCompanyId().':'.$this->app->getClient()->getSessionToken())
         );
         return $this->app->getClient()->getHttpClient()->sendRequest($trusted_request);
     }

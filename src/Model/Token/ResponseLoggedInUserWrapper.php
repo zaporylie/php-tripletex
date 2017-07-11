@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Tripletes\Model\Token;
+namespace zaporylie\Tripletex\Model\Token;
 
 use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;

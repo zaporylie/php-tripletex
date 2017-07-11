@@ -25,7 +25,7 @@ class SessionCreate extends ResourceBase implements ResourceInterface
      *
      * @return \zaporylie\Tripletex\Model\Token\ResponseSessionTokenWrapper
      */
-    public function createSession(RequestSessionCreate $sessionCreate)
+    public function call(RequestSessionCreate $sessionCreate)
     {
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
@@ -42,12 +42,16 @@ class SessionCreate extends ResourceBase implements ResourceInterface
         // Get response.
         $body = $response->getBody()->getContents();
 
+        /** @var \zaporylie\Tripletex\Model\Token\ResponseSessionTokenWrapper $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
             $body,
             'zaporylie\Tripletex\Model\Token\ResponseSessionTokenWrapper',
             'json'
         );
+
+        // Save token in client.
+        $this->app->getClient()->setSessionToken($responseObject->getValue()->getToken());
 
         return $responseObject;
     }
