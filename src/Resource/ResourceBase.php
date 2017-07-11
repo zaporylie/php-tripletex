@@ -60,6 +60,23 @@ abstract class ResourceBase implements ResourceInterface
             'Authorization',
             'Basic '.base64_encode($this->app->getClient()->getCompanyId().':'.$this->app->getClient()->getSessionToken())
         );
-        return $this->app->getClient()->getHttpClient()->sendRequest($trusted_request);
+        $response = $this->app->getClient()->getHttpClient()->sendRequest($trusted_request);
+
+        if ($response->getStatusCode() >= 400 && $response->getStatusCode() < 500) {
+            // Get response.
+            $body = $response->getBody()->getContents();
+
+            /** @var \zaporylie\Tripletex\Exception\ApiException $responseObject */
+            // Deserialize response.
+            $exception = $this->app->getSerializer()->deserialize(
+                $body,
+                'zaporylie\Tripletex\Exception\ApiException',
+                'json'
+            );
+
+            throw $exception;
+        }
+
+        return $response;
     }
 }
