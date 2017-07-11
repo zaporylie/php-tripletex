@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Model\Employee;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 use zaporylie\Tripletex\Model\ModelTrait;
 
@@ -11,11 +12,15 @@ class Employee implements ModelInterface
 
     /**
      * @var string
+     *
+     * @Serializer\Type('string')
      */
     protected $firstName;
 
     /**
      * @var string
+     *
+     * @Serializer\Type('string')
      */
     protected $lastName;
 

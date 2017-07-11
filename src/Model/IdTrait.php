@@ -2,12 +2,16 @@
 
 namespace zaporylie\Tripletex\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 trait IdTrait
 {
 
     /**
-    * @var int
-    */
+     * @var int
+     *
+     * @Serializer\Type("integer")
+     */
     protected $id;
 
     /**
@@ -19,7 +23,7 @@ trait IdTrait
     }
 
     /**
-     * @param int $id
+     * @param $id
      *
      * @return $this
      */

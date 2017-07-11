@@ -2,20 +2,24 @@
 
 namespace zaporylie\Tripletex\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 trait UrlTrait
 {
 
     /**
      * Resource Url.
      *
-     * @var int
+     * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $url;
 
     /**
      * Get Url.
      *
-     * @return int
+     * @return string
      */
     public function getUrl()
     {
@@ -25,7 +29,7 @@ trait UrlTrait
     /**
      * Set Url.
      *
-     * @param int $url
+     * @param string $url
      *
      * @return $this
      */

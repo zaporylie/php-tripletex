@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletes\Model\Token;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 use zaporylie\Tripletex\Model\Token\LoggedInUser;
 
@@ -10,6 +11,8 @@ class ResponseLoggedInUserWrapper implements ModelInterface
 
     /**
      * @var \zaporylie\Tripletex\Model\Token\LoggedInUser
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Token\LoggedInUser")
      */
     protected $value;
 

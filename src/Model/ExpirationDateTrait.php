@@ -2,17 +2,21 @@
 
 namespace zaporylie\Tripletex\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 trait ExpirationDateTrait
 {
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
+     *
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d'>")
      */
     protected $expirationDate;
 
     /**
      * Gets expirationDate value.
      *
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getExpirationDate()
     {
@@ -22,11 +26,11 @@ trait ExpirationDateTrait
     /**
      * Sets expirationDate variable.
      *
-     * @param \DateTime $expirationDate
+     * @param \DateTimeInterface $expirationDate
      *
      * @return $this
      */
-    public function setExpirationDate(\DateTime $expirationDate)
+    public function setExpirationDate(\DateTimeInterface $expirationDate)
     {
         $this->expirationDate = $expirationDate;
         return $this;

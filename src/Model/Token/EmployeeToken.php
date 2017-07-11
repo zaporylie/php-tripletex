@@ -2,31 +2,19 @@
 
 namespace zaporylie\Tripletex\Model\Token;
 
-use zaporylie\Tripletex\Model\ExpirationDateTrait;
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
-use zaporylie\Tripletex\Model\ModelTrait;
 use zaporylie\Tripletex\Model\Employee\Employee;
 
-class EmployeeToken implements ModelInterface
+class EmployeeToken extends TokenBase implements ModelInterface
 {
-
-    use ModelTrait;
-    use ExpirationDateTrait;
 
     /**
      * @var \zaporylie\Tripletex\Model\Employee\Employee
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Employee\Employee")
      */
     protected $employee;
-
-    /**
-     * @var \zaporylie\Tripletex\Model\Token\ApiConsumer
-     */
-    protected $apiConsumer;
-
-    /**
-     * @var string
-     */
-    protected $token;
 
     /**
      * Gets employee value.
@@ -51,49 +39,4 @@ class EmployeeToken implements ModelInterface
         return $this;
     }
 
-    /**
-     * Gets apiConsumer value.
-     *
-     * @return \zaporylie\Tripletex\Model\Token\ApiConsumer
-     */
-    public function getApiConsumer()
-    {
-        return $this->apiConsumer;
-    }
-
-    /**
-     * Sets apiConsumer variable.
-     *
-     * @param \zaporylie\Tripletex\Model\Token\ApiConsumer $apiConsumer
-     *
-     * @return $this
-     */
-    public function setApiConsumer(ApiConsumer $apiConsumer)
-    {
-        $this->apiConsumer = $apiConsumer;
-        return $this;
-    }
-
-    /**
-     * Gets token value.
-     *
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-    /**
-     * Sets token variable.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        $this->token = $token;
-        return $this;
-    }
 }

@@ -2,33 +2,31 @@
 
 namespace zaporylie\Tripletex\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 trait RevisionTrait
 {
 
     /**
-    * Version number.
-    *
-    * @var int
-    */
+     * @var integer
+     *
+     * @Serializer\Type("integer")
+     */
     protected $version;
 
     /**
-    * Get version number.
-    *
-    * @return int
-    */
+     * @return int
+     */
     public function getVersion()
     {
         return $this->version;
     }
 
     /**
-    * Set version number.
-    *
-    * @param int $version
-    *
-    * @return $this
-    */
+     * @param $version
+     *
+     * @return $this
+     */
     public function setVersion($version)
     {
         $this->version = $version;

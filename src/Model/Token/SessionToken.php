@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Model\Token;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ExpirationDateTrait;
 use zaporylie\Tripletex\Model\ModelTrait;
 use zaporylie\Tripletex\Model\ModelInterface;
@@ -14,16 +15,22 @@ class SessionToken implements ModelInterface
 
     /**
      * @var \zaporylie\Tripletex\Model\Token\ConsumerToken
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Token\ConsumerToken")
      */
     protected $consumerToken;
 
     /**
-     * @var \zaporylie\Tripletex\Model\Token\Employee
+     * @var \zaporylie\Tripletex\Model\Token\EmployeeToken
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Token\EmployeeToken")
      */
     protected $employeeToken;
 
     /**
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $token;
 
@@ -53,7 +60,7 @@ class SessionToken implements ModelInterface
     /**
      * Gets employeeToken value.
      *
-     * @return \zaporylie\Tripletex\Model\Token\Employee
+     * @return \zaporylie\Tripletex\Model\Token\EmployeeToken
      */
     public function getEmployeeToken()
     {
@@ -63,11 +70,11 @@ class SessionToken implements ModelInterface
     /**
      * Sets employeeToken variable.
      *
-     * @param \zaporylie\Tripletex\Model\Token\Employee $employeeToken
+     * @param \zaporylie\Tripletex\Model\Token\EmployeeToken $employeeToken
      *
      * @return $this
      */
-    public function setEmployeeToken(Employee $employeeToken)
+    public function setEmployeeToken(EmployeeToken $employeeToken)
     {
         $this->employeeToken = $employeeToken;
         return $this;

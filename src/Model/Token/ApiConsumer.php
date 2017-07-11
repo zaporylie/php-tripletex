@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Model\Token;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 
 class ApiConsumer implements ModelInterface
@@ -9,11 +10,15 @@ class ApiConsumer implements ModelInterface
 
     /**
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $consumerName;
 
     /**
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $emails;
 
