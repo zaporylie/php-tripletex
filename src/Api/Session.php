@@ -2,9 +2,11 @@
 
 namespace zaporylie\Tripletex\Api;
 
+use zaporylie\Tripletex\Model\Token\RequestSessionDelete;
 use zaporylie\Tripletex\Model\Token\RequestSessionWhoAmI;
 use zaporylie\Tripletex\Resource\Session\SessionCreate;
 use zaporylie\Tripletex\Model\Token\RequestSessionCreate;
+use zaporylie\Tripletex\Resource\Session\SessionDelete;
 use zaporylie\Tripletex\Resource\Session\SessionWhoAmI;
 use zaporylie\Tripletex\Tripletex;
 
@@ -58,8 +60,13 @@ class Session
         return (new SessionWhoAmI($this->app))->call($sessionWhoAmI);
     }
 
-    public function delete()
+    public function delete($token = null)
     {
-
+        $sessionDelete = new RequestSessionDelete();
+        if (!isset($token)) {
+            $token = $this->app->getClient()->getSessionToken();
+        }
+        $sessionDelete->setToken($token);
+        return (new SessionDelete($this->app))->call($sessionDelete);
     }
 }
