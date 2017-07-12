@@ -5,6 +5,7 @@ namespace zaporylie\Tripletex\Api;
 use zaporylie\Tripletex\Model\Order\RequestInvoiceCreate;
 use zaporylie\Tripletex\Model\Order\RequestOrderDetails;
 use zaporylie\Tripletex\Model\Order\RequestOrderList;
+use zaporylie\Tripletex\Model\Order\Order as OrderModel;
 use zaporylie\Tripletex\Resource\Order\InvoiceCreate;
 use zaporylie\Tripletex\Resource\Order\OrderCreate;
 use zaporylie\Tripletex\Resource\Order\OrderDetails;
@@ -31,9 +32,12 @@ class Order
     }
 
     /**
+     * @param \DateTimeInterface $orderDateFrom
+     * @param \DateTimeInterface $orderDateTo
      * @param array $options
      *
      * @return \zaporylie\Tripletex\Model\Order\ResponseOrderList
+     * @internal param $
      */
     public function getList(\DateTimeInterface $orderDateFrom, \DateTimeInterface $orderDateTo, $options = [])
     {
@@ -61,22 +65,22 @@ class Order
     }
 
     /**
-     * @param \zaporylie\Tripletex\Api\Order $order
+     * @param \zaporylie\Tripletex\Model\Order\Order $order
      *
      * @return \zaporylie\Tripletex\Model\Order\ResponseOrderWrapper
      */
-    public function updateOrder(Order $order)
+    public function updateOrder(OrderModel $order)
     {
         $resource = new OrderUpdate($this->app);
         return $resource->call($order);
     }
 
     /**
-     * @param \zaporylie\Tripletex\Api\Order $order
+     * @param \zaporylie\Tripletex\Model\Order\Order $order
      *
      * @return \zaporylie\Tripletex\Model\Order\ResponseOrderWrapper
      */
-    public function createOrder(Order $order)
+    public function createOrder(OrderModel $order)
     {
         $resource = new OrderCreate($this->app);
         return $resource->call($order);
