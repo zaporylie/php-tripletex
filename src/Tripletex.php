@@ -6,6 +6,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
+use zaporylie\Tripletex\Api\Product;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Client\TripletexClient;
 
@@ -31,8 +32,6 @@ class Tripletex {
         $this->client = $client;
         AnnotationRegistry::registerLoader('class_exists');
         $this->serializer = SerializerBuilder::create()
-//          ->setDebug(true)
-//          ->setCacheDir(sys_get_temp_dir())
           ->setPropertyNamingStrategy(new SerializedNameAnnotationStrategy(new IdenticalPropertyNamingStrategy()))
           ->build();
     }
@@ -57,8 +56,16 @@ class Tripletex {
         return $this->client;
     }
 
+    /**
+     * @return \zaporylie\Tripletex\Api\Session
+     */
     public function session()
     {
         return new Session($this);
+    }
+
+    public function product()
+    {
+        return new Product($this);
     }
 }

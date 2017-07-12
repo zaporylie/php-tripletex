@@ -2,21 +2,29 @@
 
 namespace zaporylie\Tripletex\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 abstract class ListBase
 {
 
     /**
      * @var int
+     *
+     * @Serializer\Type("integer")
      */
     protected $fullResultSize;
 
     /**
      * @var int
+     *
+     * @Serializer\Type("integer")
      */
     protected $from;
 
     /**
      * @var int
+     *
+     * @Serializer\Type("integer")
      */
     protected $count;
 
@@ -24,6 +32,8 @@ abstract class ListBase
      * Used to know if list has changed.
      *
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $versionDigest;
 

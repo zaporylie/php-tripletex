@@ -2,21 +2,20 @@
 
 namespace zaporylie\Tripletex\Model\Product;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
-use zaporylie\Tripletex\Model\IdTrait;
-use zaporylie\Tripletex\Model\RevisionTrait;
-use zaporylie\Tripletex\Model\UrlTrait;
+use zaporylie\Tripletex\Model\ModelTrait;
 
 class Product implements ModelInterface
 {
-    use IdTrait;
-    use RevisionTrait;
-    use UrlTrait;
+    use ModelTrait;
 
     /**
      * Product name.
      *
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $name;
 
@@ -24,6 +23,8 @@ class Product implements ModelInterface
      * Product SKU.
      *
      * @var string
+     *
+     * @Serializer\Type("string")
      */
     protected $number;
 

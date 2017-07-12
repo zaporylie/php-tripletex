@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Model\Product;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ListBase;
 use zaporylie\Tripletex\Model\ModelInterface;
 
@@ -10,6 +11,8 @@ class ResponseProductList extends ListBase implements ModelInterface
 
     /**
      * @var \zaporylie\Tripletex\Model\Product\Product[]
+     *
+     * @\JMS\Serializer\Annotation\Type("array<zaporylie\Tripletex\Model\Product\Product>")
      */
     protected $values;
 

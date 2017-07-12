@@ -2,21 +2,23 @@
 
 namespace zaporylie\Tripletex\Model\Product;
 
-use zaporylie\Tripletex\Model\Product;
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 
 class ResponseProductWrapper implements ModelInterface
 {
 
     /**
-     * @var \zaporylie\Tripletex\Model\Product
+     * @var \zaporylie\Tripletex\Model\Product\Product
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Product\Product")
      */
     protected $value;
 
     /**
      * Gets value value.
      *
-     * @return \zaporylie\Tripletex\Model\Product
+     * @return \zaporylie\Tripletex\Model\Product\Product
      */
     public function getValue()
     {
@@ -26,7 +28,7 @@ class ResponseProductWrapper implements ModelInterface
     /**
      * Sets value variable.
      *
-     * @param \zaporylie\Tripletex\Model\Product $value
+     * @param \zaporylie\Tripletex\Model\Product\Product $value
      *
      * @return $this
      */
