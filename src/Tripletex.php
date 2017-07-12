@@ -6,6 +6,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
+use zaporylie\Tripletex\Api\Order;
 use zaporylie\Tripletex\Api\Product;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Client\TripletexClient;
@@ -64,8 +65,21 @@ class Tripletex {
         return new Session($this);
     }
 
+    /**
+     * @return \zaporylie\Tripletex\Api\Product
+     */
     public function product()
     {
         return new Product($this);
     }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Order
+     */
+    public function order()
+    {
+        return new Order($this);
+    }
+
+
 }
