@@ -1,8 +1,8 @@
 {
-  "name": "xsolve-pl/salesforce-client",
-  "description": "Salesforce REST client for PHP",
+  "name": "zaporylie/tripletex",
+  "description": "PHP SDK for Tripletex API [v2]",
   "keywords": [
-    "crm",
+    "erp",
     "tripletex",
     "invoice",
     "rest",
