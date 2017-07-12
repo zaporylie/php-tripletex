@@ -5,19 +5,12 @@ namespace zaporylie\Tripletex\Model\Product;
 use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 use zaporylie\Tripletex\Model\ModelTrait;
+use zaporylie\Tripletex\Model\NameTrait;
 
 class Product implements ModelInterface
 {
     use ModelTrait;
-
-    /**
-     * Product name.
-     *
-     * @var string
-     *
-     * @Serializer\Type("string")
-     */
-    protected $name;
+    use NameTrait;
 
     /**
      * Product SKU.
@@ -27,25 +20,6 @@ class Product implements ModelInterface
      * @Serializer\Type("string")
      */
     protected $number;
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-        return $this;
-    }
 
     /**
      * Gets number value.
