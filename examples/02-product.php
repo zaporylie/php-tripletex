@@ -13,10 +13,10 @@ try {
     $product = $app->product();
 
     // Get list of products.
-    var_dump($product->list());
+    var_dump($product->getList());
 
     // Get product details - put know id.
-    var_dump($product->get(''));
+    var_dump($product->getProduct(''));
 }
 catch (Exception $exception) {
     var_dump($exception);
