@@ -82,9 +82,9 @@ class Order implements ModelInterface
     protected $department; // (Department, optional),
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      *
-     * @Serializer\Type("string")
+     * @Serializer\Type("DateTime<'Y-m-d'>")
      */
     protected $orderDate; // (string),
 
@@ -138,9 +138,9 @@ class Order implements ModelInterface
     protected $isClosed; // (boolean, optional),
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      *
-     * @Serializer\Type("string")
+     * @Serializer\Type("DateTime<'Y-m-d'>")
      */
     protected $deliveryDate; // (string),
 
