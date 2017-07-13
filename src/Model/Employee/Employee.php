@@ -13,14 +13,14 @@ class Employee implements ModelInterface
     /**
      * @var string
      *
-     * @Serializer\Type('string')
+     * @Serializer\Type("string")
      */
     protected $firstName;
 
     /**
      * @var string
      *
-     * @Serializer\Type('string')
+     * @Serializer\Type("string")
      */
     protected $lastName;
 

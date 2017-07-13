@@ -4,9 +4,12 @@ namespace zaporylie\Tripletex\Model\Order;
 
 use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
+use zaporylie\Tripletex\Model\ModelTrait;
 
 class Order implements ModelInterface
 {
+
+    use ModelTrait;
 
     /**
      * @var \zaporylie\Tripletex\Model\Customer\Customer
