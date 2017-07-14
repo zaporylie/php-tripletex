@@ -25,17 +25,4 @@ trait UrlTrait
     {
         return $this->url;
     }
-
-    /**
-     * Set Url.
-     *
-     * @param string $url
-     *
-     * @return $this
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-        return $this;
-    }
 }
