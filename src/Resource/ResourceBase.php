@@ -65,7 +65,6 @@ abstract class ResourceBase implements ResourceInterface
             'application/json'
         );
         $response = $this->app->getClient()->getHttpClient()->sendRequest($trusted_request);
-
         if ($response->getStatusCode() >= 400 && $response->getStatusCode() < 500) {
             // Get response.
             $body = $response->getBody()->getContents();

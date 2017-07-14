@@ -35,6 +35,7 @@ class OrderDetails extends ResourceBase implements ResourceInterface
             'fields' => $requestObject->getFields(),
           ])
         );
+
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
 
