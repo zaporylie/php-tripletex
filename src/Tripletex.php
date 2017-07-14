@@ -7,6 +7,7 @@ use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
 use zaporylie\Tripletex\Api\Order;
+use zaporylie\Tripletex\Api\OrderLine;
 use zaporylie\Tripletex\Api\Product;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Client\TripletexClient;
@@ -79,6 +80,14 @@ class Tripletex {
     public function order()
     {
         return new Order($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\OrderLine
+     */
+    public function orderLine()
+    {
+        return new OrderLine($this);
     }
 
 
