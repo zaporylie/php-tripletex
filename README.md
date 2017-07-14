@@ -36,8 +36,8 @@ or add this to your composer.json
 - ledger/vatType
 - ledger/voucher
 - ledger/voucherType
-- order
-- order/orderline
+- ~~order~~
+- ~~order/orderline~~
 - ~~product~~
 - project
 - project/category
