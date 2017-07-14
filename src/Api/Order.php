@@ -13,23 +13,8 @@ use zaporylie\Tripletex\Resource\Order\OrderList;
 use zaporylie\Tripletex\Resource\Order\OrderUpdate;
 use zaporylie\Tripletex\Tripletex;
 
-class Order
+class Order extends ApiBase
 {
-
-    /**
-     * @var \zaporylie\Tripletex\Tripletex
-     */
-    protected $app;
-
-    /**
-     * Product constructor.
-     *
-     * @param \zaporylie\Tripletex\Tripletex $app
-     */
-    public function __construct(Tripletex $app)
-    {
-        $this->app = $app;
-    }
 
     /**
      * @param \DateTimeInterface $orderDateFrom

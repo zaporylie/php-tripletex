@@ -8,23 +8,8 @@ use zaporylie\Tripletex\Resource\Product\ProductDetails;
 use zaporylie\Tripletex\Resource\Product\ProductList;
 use zaporylie\Tripletex\Tripletex;
 
-class Product
+class Product extends ApiBase
 {
-
-    /**
-     * @var \zaporylie\Tripletex\Tripletex
-     */
-    protected $app;
-
-    /**
-     * Product constructor.
-     *
-     * @param \zaporylie\Tripletex\Tripletex $app
-     */
-    function __construct(Tripletex $app)
-    {
-        $this->app = $app;
-    }
 
     /**
      * @param array $options

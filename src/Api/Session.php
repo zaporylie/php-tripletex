@@ -10,23 +10,8 @@ use zaporylie\Tripletex\Resource\Session\SessionDelete;
 use zaporylie\Tripletex\Resource\Session\SessionWhoAmI;
 use zaporylie\Tripletex\Tripletex;
 
-class Session
+class Session extends ApiBase
 {
-
-    /**
-     * @var \zaporylie\Tripletex\Tripletex
-     */
-    protected $app;
-
-    /**
-     * Session constructor.
-     *
-     * @param \zaporylie\Tripletex\Tripletex $app
-     */
-    public function __construct(Tripletex $app)
-    {
-        $this->app = $app;
-    }
 
     /**
      * Authorize user and retrieve session token.
