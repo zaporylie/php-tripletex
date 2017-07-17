@@ -10,28 +10,28 @@ class RequestInvoicePdf implements ModelInterface
     /**
      * @var int
      */
-    protected $invoiceId;
+    protected $id;
 
     /**
      * Gets invoiceId value.
      *
      * @return int
      */
-    public function getInvoiceId()
+    public function getId()
     {
-        return $this->invoiceId;
+        return $this->id;
     }
 
     /**
      * Sets invoiceId variable.
      *
-     * @param int $invoiceId
+     * @param int $id
      *
      * @return $this
      */
-    public function setInvoiceId($invoiceId)
+    public function setId($id)
     {
-        $this->invoiceId = $invoiceId;
+        $this->id = $id;
         return $this;
     }
 }

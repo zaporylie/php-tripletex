@@ -56,15 +56,21 @@ abstract class ResourceBase implements ResourceInterface
      */
     public function doRequest(RequestInterface $request)
     {
-        $trusted_request = $request->withAddedHeader(
-            'Authorization',
-            'Basic '.base64_encode($this->app->getClient()->getCompanyId().':'.$this->app->getClient()->getSessionToken())
-        );
-        $trusted_request = $trusted_request->withAddedHeader(
-            'Accept',
-            'application/json'
-        );
-        $response = $this->app->getClient()->getHttpClient()->sendRequest($trusted_request);
+        if (!$request->hasHeader('Authorization')) {
+            $request = $request->withAddedHeader(
+              'Authorization',
+              'Basic ' . base64_encode($this->app->getClient()
+                  ->getCompanyId() . ':' . $this->app->getClient()
+                  ->getSessionToken())
+            );
+        }
+        if (!$request->hasHeader('Accept')) {
+            $request = $request->withAddedHeader(
+              'Accept',
+              'application/json'
+            );
+        }
+        $response = $this->app->getClient()->getHttpClient()->sendRequest($request);
         if ($response->getStatusCode() >= 400 && $response->getStatusCode() < 500) {
             // Get response.
             $body = $response->getBody()->getContents();
