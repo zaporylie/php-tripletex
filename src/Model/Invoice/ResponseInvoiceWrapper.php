@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Model\Invoice;
 
+use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\ModelInterface;
 
 class ResponseInvoiceWrapper implements ModelInterface
