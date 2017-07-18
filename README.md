@@ -15,7 +15,7 @@ or add this to your composer.json
 # Remaining API support
 
 - activity
-- address
+- ~~address~~
 - company
 - contact
 - country
