@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Tripletex\Resource\Invoice;
+namespace zaporylie\Tripletex\Resource\Address;
 
 use zaporylie\Tripletex\Client\RequestMethod;
 use zaporylie\Tripletex\Model\Address\Address;
@@ -31,7 +31,7 @@ class AddressUpdate extends ResourceBase
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
             $this->getMethod(),
             $this->getPath($requestObject->getId()),
-            [],
+            ['Content-Type' => 'application/json; charset=utf-8'],
             $address
         );
 

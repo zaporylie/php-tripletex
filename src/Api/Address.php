@@ -6,6 +6,8 @@ use zaporylie\Tripletex\Model\Address\RequestAddressDetails;
 use zaporylie\Tripletex\Model\Address\RequestAddressList;
 use zaporylie\Tripletex\Resource\Address\AddressDetails;
 use zaporylie\Tripletex\Resource\Address\AddressList;
+use zaporylie\Tripletex\Model\Address\Address as AddressModel;
+use zaporylie\Tripletex\Resource\Address\AddressUpdate;
 
 class Address extends ApiBase
 {
@@ -24,5 +26,11 @@ class Address extends ApiBase
         // @todo: Pass options.
         $resource = new AddressDetails($this->app);
         return $resource->call($request);
+    }
+
+    public function updateAddress(AddressModel $address)
+    {
+        $resource = new AddressUpdate($this->app);
+        return $resource->call($address);
     }
 }
