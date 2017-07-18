@@ -6,6 +6,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
+use zaporylie\Tripletex\Api\Invoice;
 use zaporylie\Tripletex\Api\Order;
 use zaporylie\Tripletex\Api\OrderLine;
 use zaporylie\Tripletex\Api\Product;
@@ -88,6 +89,14 @@ class Tripletex {
     public function orderLine()
     {
         return new OrderLine($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Invoice
+     */
+    public function invoice()
+    {
+        return new Invoice($this);
     }
 
 
