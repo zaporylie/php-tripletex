@@ -38,13 +38,21 @@ abstract class ResourceBase implements ResourceInterface
     /**
      * {@inheritdoc}
      */
-    public function getPath()
+    public function getPath($id = null)
     {
         if (!isset($this->path)) {
             throw new \LogicException('Missing request path');
         }
 
-        return $this->app->getClient()->getBaseUrl() . $this->path;
+        // Get local var.
+        $path = $this->path;
+
+        // If ID is set replace {id} pattern with model's ID.
+        if (isset($id)) {
+            $path = str_replace('{id}', $id, $path);
+        }
+
+        return $this->app->getClient()->getBaseUrl() . $path;
     }
 
     /**
