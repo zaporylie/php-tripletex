@@ -25,8 +25,8 @@ or add this to your composer.json
 - employee
 - employee/entitlement
 - inventory
-- invoice
-- invoice/paymentType
+- ~~invoice~~
+- ~~invoice/paymentType~~
 - ledger
 - ledger/account
 - ledger/accountingPeriod
