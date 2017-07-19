@@ -40,9 +40,11 @@
   },
   "scripts": {
     "test": [
-      "@composer test-cs"
+      "@composer test-cs",
+      "@composer test-unit"
     ],
-    "test-cs": "./vendor/bin/phpcs -p"
+    "test-cs": "./vendor/bin/phpcs -p",
+    "test-unit": "./vendor/bin/phpunit"
   },
   "autoload":{
     "psr-4":{
