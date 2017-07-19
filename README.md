@@ -1,4 +1,4 @@
-Tripletex PHP SDK [API v2]
+Tripletex PHP SDK [API v2] [![Build Status](https://travis-ci.org/zaporylie/php-tripletex.svg?branch=master)](https://travis-ci.org/zaporylie/php-tripletex)
 ====================
 
 # Quickstart
