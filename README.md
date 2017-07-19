@@ -20,7 +20,7 @@ or add this to your composer.json
 - contact
 - country
 - currency
-- customer
+- ~~customer~~
 - department
 - employee
 - employee/entitlement
