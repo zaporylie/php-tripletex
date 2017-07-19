@@ -12,6 +12,7 @@ use zaporylie\Tripletex\Api\OrderLine;
 use zaporylie\Tripletex\Api\Product;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Api\Address;
+use zaporylie\Tripletex\Api\Customer;
 use zaporylie\Tripletex\Client\TripletexClient;
 
 class Tripletex {
@@ -106,6 +107,14 @@ class Tripletex {
     public function address()
     {
         return new Address($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Customer
+     */
+    public function customer()
+    {
+        return new Customer($this);
     }
 
 
