@@ -30,13 +30,13 @@ class InvoicePayment extends ResourceBase implements ResourceInterface
     {
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath().'?'.http_build_query([
+            $this->getMethod(),
+            $this->getPath().'?'.http_build_query([
             'invoiceId' => $requestObject->getInvoiceId(),
             'paymentDate' => $requestObject->getPaymentDate()->format('c'),
             'paymentTypeId' => $requestObject->getPaymentTypeId(),
             'paidAmount' => $requestObject->getPaidAmount(),
-          ])
+            ])
         );
 
         /** @var \Psr\Http\Message\ResponseInterface $response */
@@ -48,9 +48,9 @@ class InvoicePayment extends ResourceBase implements ResourceInterface
         /** @var \zaporylie\Tripletex\Model\Invoice\ResponseInvoiceWrapper $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Invoice\ResponseInvoiceWrapper',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Invoice\ResponseInvoiceWrapper',
+            'json'
         );
 
         return $responseObject;

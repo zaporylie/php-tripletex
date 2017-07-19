@@ -177,5 +177,4 @@ class RequestPaymentTypeList implements ModelInterface
         $this->fields = $fields;
         return $this;
     }
-
 }

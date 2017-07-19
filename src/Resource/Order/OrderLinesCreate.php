@@ -28,10 +28,10 @@ class OrderLinesCreate extends ResourceBase
         $orders = $this->app->getSerializer()->serialize($requestObject, 'json');
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath(),
-          ['Content-Type' => 'application/json; charset=utf-8'],
-          $orders
+            $this->getMethod(),
+            $this->getPath(),
+            ['Content-Type' => 'application/json; charset=utf-8'],
+            $orders
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
@@ -42,9 +42,9 @@ class OrderLinesCreate extends ResourceBase
         /** @var \zaporylie\Tripletex\Model\Order\ResponseOrderLineList $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Order\ResponseOrderLineList',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Order\ResponseOrderLineList',
+            'json'
         );
 
         return $responseObject;

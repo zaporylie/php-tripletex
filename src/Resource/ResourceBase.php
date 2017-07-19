@@ -66,16 +66,16 @@ abstract class ResourceBase implements ResourceInterface
     {
         if (!$request->hasHeader('Authorization')) {
             $request = $request->withAddedHeader(
-              'Authorization',
-              'Basic ' . base64_encode($this->app->getClient()
+                'Authorization',
+                'Basic ' . base64_encode($this->app->getClient()
                   ->getCompanyId() . ':' . $this->app->getClient()
                   ->getSessionToken())
             );
         }
         if (!$request->hasHeader('Accept')) {
             $request = $request->withAddedHeader(
-              'Accept',
-              'application/json'
+                'Accept',
+                'application/json'
             );
         }
         $response = $this->app->getClient()->getHttpClient()->sendRequest($request);

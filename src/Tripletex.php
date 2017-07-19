@@ -15,7 +15,8 @@ use zaporylie\Tripletex\Api\Address;
 use zaporylie\Tripletex\Api\Customer;
 use zaporylie\Tripletex\Client\TripletexClient;
 
-class Tripletex {
+class Tripletex
+{
 
     /**
     * @var \zaporylie\Tripletex\Client\TripletexClient
@@ -116,6 +117,4 @@ class Tripletex {
     {
         return new Customer($this);
     }
-
-
 }

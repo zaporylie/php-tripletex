@@ -337,5 +337,4 @@ class RequestInvoiceList implements ModelInterface
         $this->fields = $fields;
         return $this;
     }
-
 }

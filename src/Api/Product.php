@@ -16,7 +16,8 @@ class Product extends ApiBase
      *
      * @return \zaporylie\Tripletex\Model\Product\ResponseProductList
      */
-    public function getList($options = []) {
+    public function getList($options = [])
+    {
         $request = new RequestProductList();
         // @todo: Pass options.
         $resource = new ProductList($this->app);
@@ -29,7 +30,8 @@ class Product extends ApiBase
      *
      * @return \zaporylie\Tripletex\Model\Product\ResponseProductWrapper
      */
-    public function getProduct($id, $options = []) {
+    public function getProduct($id, $options = [])
+    {
         $request = new RequestProductDetails();
         $request->setId($id);
         // @todo: Pass options.

@@ -29,15 +29,15 @@ class PaymentTypeList extends ResourceBase implements ResourceInterface
     {
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath().'?'.http_build_query([
+            $this->getMethod(),
+            $this->getPath().'?'.http_build_query([
             'id' => $requestObject->getId(),
             'description' => $requestObject->getDescription(),
             'from' => $requestObject->getFrom(),
             'count' => $requestObject->getCount(),
             'sorting' => $requestObject->getSorting(),
             'fields' => $requestObject->getFields(),
-          ])
+            ])
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
@@ -48,9 +48,9 @@ class PaymentTypeList extends ResourceBase implements ResourceInterface
         /** @var \zaporylie\Tripletex\Model\Invoice\ResponsePaymentTypeList $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Invoice\ResponsePaymentTypeList',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Invoice\ResponsePaymentTypeList',
+            'json'
         );
 
         return $responseObject;

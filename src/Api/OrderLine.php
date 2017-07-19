@@ -46,6 +46,4 @@ class OrderLine extends ApiBase
         $resource = new OrderLinesCreate($this->app);
         return $resource->call($orderLine);
     }
-
-
 }

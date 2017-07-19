@@ -38,5 +38,4 @@ class EmployeeToken extends TokenBase implements ModelInterface
         $this->employee = $employee;
         return $this;
     }
-
 }

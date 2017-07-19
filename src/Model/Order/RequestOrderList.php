@@ -307,5 +307,4 @@ class RequestOrderList implements ModelInterface
         $this->fields = $fields;
         return $this;
     }
-
 }

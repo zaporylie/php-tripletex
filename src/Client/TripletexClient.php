@@ -152,5 +152,4 @@ class TripletexClient
         }
         return HttpClientDiscovery::find();
     }
-
 }

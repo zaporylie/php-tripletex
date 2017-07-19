@@ -342,7 +342,7 @@ class OrderLine implements ModelInterface
      * @return $this
      */
     public function setUnitPriceExcludingVatCurrency(
-      $unitPriceExcludingVatCurrency
+        $unitPriceExcludingVatCurrency
     ) {
         $this->unitPriceExcludingVatCurrency = $unitPriceExcludingVatCurrency;
         return $this;
@@ -366,7 +366,7 @@ class OrderLine implements ModelInterface
      * @return $this
      */
     public function setUnitPriceIncludingVatCurrency(
-      $unitPriceIncludingVatCurrency
+        $unitPriceIncludingVatCurrency
     ) {
         $this->unitPriceIncludingVatCurrency = $unitPriceIncludingVatCurrency;
         return $this;

@@ -818,7 +818,7 @@ class Order implements ModelInterface
      * @return $this
      */
     public function setSubscriptionInvoicingTimeInAdvanceOrArrears(
-      $subscriptionInvoicingTimeInAdvanceOrArrears
+        $subscriptionInvoicingTimeInAdvanceOrArrears
     ) {
         $this->subscriptionInvoicingTimeInAdvanceOrArrears = $subscriptionInvoicingTimeInAdvanceOrArrears;
         return $this;
@@ -842,7 +842,7 @@ class Order implements ModelInterface
      * @return $this
      */
     public function setSubscriptionInvoicingTimeType(
-      $subscriptionInvoicingTimeType
+        $subscriptionInvoicingTimeType
     ) {
         $this->subscriptionInvoicingTimeType = $subscriptionInvoicingTimeType;
         return $this;
@@ -866,7 +866,7 @@ class Order implements ModelInterface
      * @return $this
      */
     public function setSubscriptionPeriodsOnInvoice(
-      $subscriptionPeriodsOnInvoice
+        $subscriptionPeriodsOnInvoice
     ) {
         $this->subscriptionPeriodsOnInvoice = $subscriptionPeriodsOnInvoice;
         return $this;
@@ -890,7 +890,7 @@ class Order implements ModelInterface
      * @return $this
      */
     public function setSubscriptionPeriodsOnInvoiceType(
-      $subscriptionPeriodsOnInvoiceType
+        $subscriptionPeriodsOnInvoiceType
     ) {
         $this->subscriptionPeriodsOnInvoiceType = $subscriptionPeriodsOnInvoiceType;
         return $this;
@@ -937,7 +937,7 @@ class Order implements ModelInterface
      * @return $this
      */
     public function setIsPrioritizeAmountsIncludingVat(
-      $isPrioritizeAmountsIncludingVat
+        $isPrioritizeAmountsIncludingVat
     ) {
         $this->isPrioritizeAmountsIncludingVat = $isPrioritizeAmountsIncludingVat;
         return $this;
@@ -1011,5 +1011,4 @@ class Order implements ModelInterface
         $this->isSubscriptionAutoInvoicing = $isSubscriptionAutoInvoicing;
         return $this;
     }
-
 }

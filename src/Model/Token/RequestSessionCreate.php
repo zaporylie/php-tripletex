@@ -85,5 +85,4 @@ class RequestSessionCreate implements ModelInterface
         }
         return $this->traitSetExpirationDate($expirationDate);
     }
-
 }

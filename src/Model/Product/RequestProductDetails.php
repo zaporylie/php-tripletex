@@ -67,5 +67,4 @@ class RequestProductDetails implements ModelInterface
         $this->fields = $fields;
         return $this;
     }
-
 }

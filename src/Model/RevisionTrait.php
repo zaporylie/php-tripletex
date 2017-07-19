@@ -32,5 +32,4 @@ trait RevisionTrait
         $this->version = $version;
         return $this;
     }
-
 }

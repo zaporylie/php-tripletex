@@ -356,6 +356,4 @@ class Invoice implements ModelInterface
     {
         return $this->isCreditNote;
     }
-
-
 }

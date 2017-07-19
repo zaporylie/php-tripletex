@@ -31,10 +31,10 @@ class CustomerUpdate extends ResourceBase implements ResourceInterface
 
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath($requestObject->getId()),
-          ['Content-Type' => 'application/json; charset=utf-8'],
-          $customer
+            $this->getMethod(),
+            $this->getPath($requestObject->getId()),
+            ['Content-Type' => 'application/json; charset=utf-8'],
+            $customer
         );
 
         /** @var \Psr\Http\Message\ResponseInterface $response */
@@ -46,9 +46,9 @@ class CustomerUpdate extends ResourceBase implements ResourceInterface
         /** @var \zaporylie\Tripletex\Model\Customer\ResponseCustomerWrapper $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Customer\ResponseCustomerWrapper',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Customer\ResponseCustomerWrapper',
+            'json'
         );
 
         return $responseObject;

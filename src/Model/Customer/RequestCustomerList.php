@@ -100,5 +100,4 @@ class RequestCustomerList extends RequestListBase implements ModelInterface
         $this->accountManagerId = $accountManagerId;
         return $this;
     }
-
 }
