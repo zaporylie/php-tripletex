@@ -17,7 +17,11 @@ or add this to your composer.json
   }
 ```
 
-# Remaining API support
+# API documentation
+
+https://tripletex.no/v2-docs
+
+# Implemented/Remaining API
 
 - activity
 - ~~address~~
@@ -53,3 +57,7 @@ or add this to your composer.json
 - ~~token/session~~
 
 If you want to contribute by adding one of missing APIs to this SDK you're more then welcome to submit a Pull Request.
+
+# Credits
+
+Jakub Piasecki for [Ny Media AS](https://www.nymedia.no)
