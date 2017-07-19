@@ -1,4 +1,4 @@
-Tripletex PHP SDK [API v2] [![Build Status](https://travis-ci.org/zaporylie/php-tripletex.svg?branch=master)](https://travis-ci.org/zaporylie/php-tripletex)
+Tripletex PHP SDK [API v2] [![Build Status](https://travis-ci.org/zaporylie/php-tripletex.svg?branch=master)](https://travis-ci.org/zaporylie/php-tripletex) [![codecov](https://codecov.io/gh/zaporylie/php-tripletex/branch/master/graph/badge.svg)](https://codecov.io/gh/zaporylie/php-tripletex) [![Packagist Pre Release](https://img.shields.io/packagist/vpre/zaporylie/tripletex.svg)](https://packagist.org/packages/zaporylie/tripletex) 
 ====================
 
 # Requirements
