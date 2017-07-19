@@ -15,105 +15,105 @@ class Invoice implements ModelInterface
      *
      * @Serializer\Type("integer")
      */
-    protected $invoiceNumber; // (integer, optional): If value is set to 0, the invoice number will be generated. ,
+    protected $invoiceNumber;
 
     /**
      * @var \DateTimeInterface
      *
      * @Serializer\Type("DateTime<'Y-m-d'>")
      */
-    protected $invoiceDate; // (string),
+    protected $invoiceDate;
 
     /**
      * @var \DateTimeInterface
      *
      * @Serializer\Type("DateTime<'Y-m-d'>")
      */
-    protected $invoiceDueDate; // (string),
+    protected $invoiceDueDate;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $kid; // (string, optional): KID - Kundeidentifikasjonsnummer. ,
+    protected $kid;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $comment; // (string, optional),
+    protected $comment;
 
     /**
      * @var \zaporylie\Tripletex\Model\Order\Order[]
      *
      * @Serializer\Type("array<zaporylie\Tripletex\Model\Order\Order>")
      */
-    protected $orders; // (Array[Order]): Related orders. Only one order per invoice is supported at the moment. ,
+    protected $orders;
 
     /**
      * @var \zaporylie\Tripletex\Model\Ledger\Voucher
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Ledger\Voucher")
      */
-    protected $voucher; // (Voucher, optional, read only): The invoice voucher. ,
+    protected $voucher;
 
     /**
      * @var \DateTimeInterface
      *
      * @Serializer\Type("DateTime<'Y-m-d'>")
      */
-    protected $deliveryDate; // (string, optional, read only): The delivery date. ,
+    protected $deliveryDate;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amount; // (number, optional, read only): In the company’s currency, typically NOK. ,
+    protected $amount;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amountCurrency; // (number, optional, read only): In the specified currency. ,
+    protected $amountCurrency;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amountExcludingVat; // (number, optional, read only): Amount excluding VAT (NOK). ,
+    protected $amountExcludingVat;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amountExcludingVatCurrency; // (number, optional, read only): Amount excluding VAT in the specified currency. ,
+    protected $amountExcludingVatCurrency;
 
     /**
      * @var \zaporylie\Tripletex\Model\Currency\Currency
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Currency\Currency")
      */
-    protected $currency; // (Currency, optional, read only),
+    protected $currency;
 
     /**
      * @var bool
      *
      * @Serializer\Type("boolean")
      */
-    protected $isCreditNote; // (boolean, optional, read only),
+    protected $isCreditNote;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $ehfSendStatus; // (string, optional) = ['DO_NOT_SEND', 'SEND', 'SENT', 'SEND_FAILURE_RECIPIENT_NOT_FOUND']
+    protected $ehfSendStatus;
 
     /**
      * Gets kid value.

@@ -19,119 +19,119 @@ class OrderLine implements ModelInterface
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Order\Order")
      */
-    protected $order; // (Order, optional),
+    protected $order;
 
     /**
      * @var \zaporylie\Tripletex\Model\Product\Product
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Product\Product")
      */
-    protected $product; // (Product, optional),
+    protected $product;
 
     /**
      * @var \zaporylie\Tripletex\Model\Inventory\Inventory
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Inventory\Inventory")
      */
-    protected $inventory; // (Inventory, optional),
+    protected $inventory;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $description; // (string, optional),
+    protected $description;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $count; // (number, optional),
+    protected $count;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $unitCostCurrency; // (number, optional): Unit price purchase (cost) excluding VAT in the order's currency ,
+    protected $unitCostCurrency;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $unitPriceExcludingVatCurrency; // (number, optional): Unit price of purchase excluding VAT in the order's currency ,
+    protected $unitPriceExcludingVatCurrency;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $unitPriceIncludingVatCurrency; // (number, optional): Unit price of purchase including VAT in the order's currency ,
+    protected $unitPriceIncludingVatCurrency;
 
     /**
      * @var \zaporylie\Tripletex\Model\Currency\Currency
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Currency\Currency")
      */
-    protected $currency; // (Currency, optional, read only): The order line's currency. Determined by the order's currency. ,
+    protected $currency;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $markup; // (number, optional): Markup given as a percentage (%) ,
+    protected $markup;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $discount; // (number, optional): Discount given as a percentage (%) ,
+    protected $discount;
 
     /**
      * @var \zaporylie\Tripletex\Model\Ledger\VatType
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Ledger\VatType")
      */
-    protected $vatType; // (VatType, optional),
+    protected $vatType;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amountExcludingVatCurrency; // (number, optional, read only): Total amount on order line excluding VAT in the order's currency ,
+    protected $amountExcludingVatCurrency;
 
     /**
      * @var float
      *
      * @Serializer\Type("float")
      */
-    protected $amountIncludingVatCurrency; // (number, optional, read only): Total amount on order line including VAT in the order's currency ,
+    protected $amountIncludingVatCurrency;
 
     /**
      * @var bool
      *
      * @Serializer\Type("boolean")
      */
-    protected $isSubscription; // (boolean, optional),
+    protected $isSubscription;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $subscriptionPeriodStart; // (string, optional),
+    protected $subscriptionPeriodStart;
 
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $subscriptionPeriodEnd; // (string, optional)
+    protected $subscriptionPeriodEnd;
 
     /**
      * Gets currency value.
