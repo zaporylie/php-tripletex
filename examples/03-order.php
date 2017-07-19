@@ -5,7 +5,7 @@ include __DIR__ . '/../vendor/autoload.php';
 try {
     $client = new \zaporylie\Tripletex\Client\TripletexClient([
         // Add session token received from 01-auth.php.
-        'session_token' => '62ae8bda-63a3-48a4-b790-15e4612c0331',
+        'session_token' => '',
     ]);
     $app = new \zaporylie\Tripletex\Tripletex($client);
 
