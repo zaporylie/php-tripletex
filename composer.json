@@ -32,10 +32,17 @@
   "require-dev": {
     "php-http/guzzle6-adapter": "^1.0",
     "phpunit/phpunit": "5.5.*",
+    "squizlabs/php_codesniffer": "^2.0",
     "friendsofphp/php-cs-fixer": "^2.0"
   },
   "suggest": {
     "php-http/guzzle6-adapter": "Guzzle adapter"
+  },
+  "scripts": {
+    "test": [
+      "@composer test-cs"
+    ],
+    "test-cs": "./vendor/bin/phpcs -p"
   },
   "autoload":{
     "psr-4":{
