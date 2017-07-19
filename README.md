@@ -1,6 +1,11 @@
 Tripletex PHP SDK [API v2] [![Build Status](https://travis-ci.org/zaporylie/php-tripletex.svg?branch=master)](https://travis-ci.org/zaporylie/php-tripletex)
 ====================
 
+# Requirements
+
+- PHP 5.6
+- Composer
+
 # Quickstart
 `composer require zaporylie/tripletex`
 
