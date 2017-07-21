@@ -4,6 +4,7 @@ namespace zaporylie\Tripletex\Model\Order;
 
 use JMS\Serializer\Annotation as Serializer;
 use zaporylie\Tripletex\Model\Currency\Currency;
+use zaporylie\Tripletex\Model\Inventory\Inventory;
 use zaporylie\Tripletex\Model\Ledger\VatType;
 use zaporylie\Tripletex\Model\ModelInterface;
 use zaporylie\Tripletex\Model\ModelTrait;
@@ -272,7 +273,7 @@ class OrderLine implements ModelInterface
      *
      * @return $this
      */
-    public function setInventory($inventory)
+    public function setInventory(Inventory $inventory)
     {
         $this->inventory = $inventory;
         return $this;
@@ -318,7 +319,7 @@ class OrderLine implements ModelInterface
      *
      * @return $this
      */
-    public function setOrder($order)
+    public function setOrder(Order $order)
     {
         $this->order = $order;
         return $this;
