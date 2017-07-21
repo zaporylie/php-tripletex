@@ -558,19 +558,6 @@ class Order implements ModelInterface
     }
 
     /**
-     * Sets orderLines variable.
-     *
-     * @param \zaporylie\Tripletex\Model\Order\OrderLine[] $orderLines
-     *
-     * @return $this
-     */
-    public function setOrderLines(array $orderLines)
-    {
-        $this->orderLines = $orderLines;
-        return $this;
-    }
-
-    /**
      * Gets orderLineSorting value.
      *
      * @return string
@@ -880,20 +867,6 @@ class Order implements ModelInterface
     public function getSubscriptionPeriodsOnInvoiceType()
     {
         return $this->subscriptionPeriodsOnInvoiceType;
-    }
-
-    /**
-     * Sets subscriptionPeriodsOnInvoiceType variable.
-     *
-     * @param string $subscriptionPeriodsOnInvoiceType
-     *
-     * @return $this
-     */
-    public function setSubscriptionPeriodsOnInvoiceType(
-        $subscriptionPeriodsOnInvoiceType
-    ) {
-        $this->subscriptionPeriodsOnInvoiceType = $subscriptionPeriodsOnInvoiceType;
-        return $this;
     }
 
     /**

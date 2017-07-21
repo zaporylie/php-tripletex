@@ -29,12 +29,13 @@ class OrderUpdate extends ResourceBase implements ResourceInterface
      */
     public function call(Order $requestObject)
     {
+        $order = $this->app->getSerializer()->serialize($requestObject, 'json');
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
             $this->getMethod(),
             $this->getPath($requestObject->getId()),
             ['Content-Type' => 'application/json; charset=utf-8'],
-            $this->app->getSerializer()->serialize($requestObject, 'json')
+            $order
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
