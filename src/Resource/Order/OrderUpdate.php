@@ -20,7 +20,7 @@ class OrderUpdate extends ResourceBase implements ResourceInterface
     /**
      * @var string
      */
-    protected $path = '/order';
+    protected $path = '/order/{id}';
 
     /**
      * @param \zaporylie\Tripletex\Model\Order\Order $requestObject
@@ -32,10 +32,8 @@ class OrderUpdate extends ResourceBase implements ResourceInterface
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
             $this->getMethod(),
-            $this->getPath().'/'.$requestObject->getId().'?'.http_build_query([
-                'fields' => $requestObject->getFields(),
-            ]),
-            [],
+            $this->getPath($requestObject->getId()),
+            ['Content-Type' => 'application/json; charset=utf-8'],
             $this->app->getSerializer()->serialize($requestObject, 'json')
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
