@@ -26,4 +26,50 @@ class VatType implements ModelInterface
      * @Serializer\Type("float")
      */
     protected $percentage; // (number, optional)
+
+    /**
+     * Gets number value.
+     *
+     * @return string
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * Sets number variable.
+     *
+     * @param string $number
+     *
+     * @return $this
+     */
+    public function setNumber($number)
+    {
+        $this->number = $number;
+        return $this;
+    }
+
+    /**
+     * Gets percentage value.
+     *
+     * @return float
+     */
+    public function getPercentage()
+    {
+        return $this->percentage;
+    }
+
+    /**
+     * Sets percentage variable.
+     *
+     * @param float $percentage
+     *
+     * @return $this
+     */
+    public function setPercentage($percentage)
+    {
+        $this->percentage = $percentage;
+        return $this;
+    }
 }
