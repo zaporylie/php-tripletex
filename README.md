@@ -42,7 +42,7 @@ https://tripletex.no/v2-docs
 - ledger/annualAccount
 - ledger/closeGroup
 - ledger/posting
-- ledger/vatType
+- ~~ledger/vatType~~
 - ledger/voucher
 - ledger/voucherType
 - ~~order~~

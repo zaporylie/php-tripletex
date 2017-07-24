@@ -13,6 +13,7 @@ use zaporylie\Tripletex\Api\Product;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Api\Address;
 use zaporylie\Tripletex\Api\Customer;
+use zaporylie\Tripletex\Api\Ledger;
 use zaporylie\Tripletex\Client\TripletexClient;
 
 class Tripletex
@@ -116,5 +117,13 @@ class Tripletex
     public function customer()
     {
         return new Customer($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Ledger
+     */
+    public function ledger()
+    {
+        return new Ledger($this);
     }
 }
