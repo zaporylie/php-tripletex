@@ -29,15 +29,15 @@ class VatTypeList extends ResourceBase implements ResourceInterface
     {
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath().'?'.http_build_query([
+            $this->getMethod(),
+            $this->getPath().'?'.http_build_query([
             'id' => $requestObject->getId(),
             'number' => $requestObject->getNumber(),
             'from' => $requestObject->getFrom(),
             'count' => $requestObject->getCount(),
             'sorting' => $requestObject->getSorting(),
             'fields' => $requestObject->getFields(),
-          ])
+            ])
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
@@ -48,9 +48,9 @@ class VatTypeList extends ResourceBase implements ResourceInterface
         /** @var \zaporylie\Tripletex\Model\Ledger\ResponseVatTypeList $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Ledger\ResponseVatTypeList',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Ledger\ResponseVatTypeList',
+            'json'
         );
 
         return $responseObject;

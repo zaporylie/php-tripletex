@@ -30,10 +30,10 @@ class VatTypeDetails extends ResourceBase implements ResourceInterface
     {
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
-          $this->getMethod(),
-          $this->getPath($requestObject->getId()).'?'.http_build_query([
+            $this->getMethod(),
+            $this->getPath($requestObject->getId()).'?'.http_build_query([
             'fields' => $requestObject->getFields(),
-          ])
+            ])
         );
 
         /** @var \Psr\Http\Message\ResponseInterface $response */
@@ -45,9 +45,9 @@ class VatTypeDetails extends ResourceBase implements ResourceInterface
         /** @var \zaporylie\Tripletex\Model\Ledger\ResponseVatTypeWrapper $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
-          $body,
-          'zaporylie\Tripletex\Model\Ledger\ResponseVatTypeWrapper',
-          'json'
+            $body,
+            'zaporylie\Tripletex\Model\Ledger\ResponseVatTypeWrapper',
+            'json'
         );
 
         return $responseObject;
