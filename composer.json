@@ -33,10 +33,12 @@
     "php-http/guzzle6-adapter": "^1.0",
     "phpunit/phpunit": "5.5.*",
     "squizlabs/php_codesniffer": "^2.0",
-    "friendsofphp/php-cs-fixer": "^2.0"
+    "friendsofphp/php-cs-fixer": "^2.0",
+    "blablacar/redis-client": "^1.0"
   },
   "suggest": {
-    "php-http/guzzle6-adapter": "Guzzle adapter"
+    "php-http/guzzle6-adapter": "Guzzle adapter",
+    "blablacar/redis-client": "Needed if Redis will be used as the storage for tokens"
   },
   "scripts": {
     "test": [
@@ -54,6 +56,11 @@
   "autoload-dev":{
     "psr-4":{
       "zaporylie\\Tripletex\\": ["src/", "tests/"]
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "5.6"
     }
   }
 }
