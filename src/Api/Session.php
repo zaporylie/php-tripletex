@@ -49,7 +49,7 @@ class Session extends ApiBase
     {
         $sessionDelete = new RequestSessionDelete();
         if (!isset($token)) {
-            $token = $this->app->getClient()->getSessionToken()->getToken()->getToken();
+            $token = $this->app->getClient()->getSessionToken()->get()->getToken();
         }
         $sessionDelete->setToken($token);
         return (new SessionDelete($this->app))->call($sessionDelete);

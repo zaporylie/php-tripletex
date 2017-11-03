@@ -17,7 +17,7 @@ class TokenStorage implements TokenStorageInterface
      *
      * @return \zaporylie\Tripletex\Model\Token\SessionToken
      */
-    public function getToken()
+    public function get()
     {
         return $this->token;
     }
@@ -29,7 +29,7 @@ class TokenStorage implements TokenStorageInterface
      *
      * @return $this
      */
-    public function setToken(SessionToken $token)
+    public function set(SessionToken $token)
     {
         $this->token = $token;
         return $this;

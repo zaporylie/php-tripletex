@@ -9,12 +9,12 @@ interface TokenStorageInterface
     /**
      * @return \zaporylie\Tripletex\Model\Token\SessionToken
      */
-    public function getToken();
+    public function get();
 
     /**
      * @param \zaporylie\Tripletex\Model\Token\SessionToken $token
      *
      * @return $this
      */
-    public function setToken(SessionToken $token);
+    public function set(SessionToken $token);
 }

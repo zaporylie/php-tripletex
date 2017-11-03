@@ -101,7 +101,7 @@ class TripletexClient
             $this->sessionToken = $sessionToken;
         } elseif (isset($sessionToken) && is_scalar($sessionToken)) {
             $this->sessionToken = new TokenStorage();
-            $this->sessionToken->setToken((new SessionToken())->setToken($sessionToken));
+            $this->sessionToken->set((new SessionToken())->setToken($sessionToken));
         } else {
             $this->sessionToken = new TokenStorage();
         }
