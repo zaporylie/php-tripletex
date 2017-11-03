@@ -6,6 +6,9 @@ use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\MessageFactoryDiscovery;
+use zaporylie\Tripletex\Client\Token\TokenStorage;
+use zaporylie\Tripletex\Client\Token\TokenStorageInterface;
+use zaporylie\Tripletex\Model\Token\SessionToken;
 
 class TripletexClient
 {
@@ -26,7 +29,7 @@ class TripletexClient
     protected $messageFactory;
 
     /**
-     * @var string
+     * @var \zaporylie\Tripletex\Client\Token\TokenStorageInterface
      */
     protected $sessionToken;
 
@@ -78,7 +81,7 @@ class TripletexClient
     /**
      * Gets sessionToken value.
      *
-     * @return string
+     * @return \zaporylie\Tripletex\Client\Token\TokenStorageInterface
      */
     public function getSessionToken()
     {
@@ -88,13 +91,20 @@ class TripletexClient
     /**
      * Sets sessionToken variable.
      *
-     * @param string $sessionToken
+     * @param string|\zaporylie\Tripletex\Client\Token\TokenStorageInterface|null $sessionToken
      *
      * @return $this
      */
     public function setSessionToken($sessionToken)
     {
-        $this->sessionToken = $sessionToken;
+        if (isset($sessionToken) && $sessionToken instanceof TokenStorageInterface) {
+            $this->sessionToken = $sessionToken;
+        } elseif (isset($sessionToken) && is_scalar($sessionToken)) {
+            $this->sessionToken = new TokenStorage();
+            $this->sessionToken->setToken((new SessionToken())->setToken($sessionToken));
+        } else {
+            $this->sessionToken = new TokenStorage();
+        }
         return $this;
     }
 

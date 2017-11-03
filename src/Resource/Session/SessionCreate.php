@@ -34,7 +34,9 @@ class SessionCreate extends ResourceBase implements ResourceInterface
                 'consumerToken' => $sessionCreate->getConsumerToken(),
                 'employeeToken' => $sessionCreate->getEmployeeToken(),
                 'expirationDate' => $sessionCreate->getExpirationDate()->format('c'),
-            ])
+            ]),
+            // Authorization token is not available when we create new session.
+            ['Authorization' => null]
         );
         /** @var \Psr\Http\Message\ResponseInterface $response */
         $response = $this->doRequest($request);
