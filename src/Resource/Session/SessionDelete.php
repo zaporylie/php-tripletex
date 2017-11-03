@@ -38,9 +38,6 @@ class SessionDelete extends ResourceBase implements ResourceInterface
         // Get response.
         $body = $response->getBody()->getContents();
 
-        // Save token in client.
-        $this->app->getClient()->setSessionToken(null);
-
         return true;
     }
 }

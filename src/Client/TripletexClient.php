@@ -95,7 +95,7 @@ class TripletexClient
      *
      * @return $this
      */
-    public function setSessionToken($sessionToken)
+    protected function setSessionToken($sessionToken)
     {
         if (isset($sessionToken) && $sessionToken instanceof TokenStorageInterface) {
             $this->sessionToken = $sessionToken;
