@@ -64,7 +64,7 @@ abstract class ResourceBase implements ResourceInterface
      */
     public function doRequest(RequestInterface $request)
     {
-        if (!$request->hasHeader('Authorization') && $this->app->getClient()->getSessionToken()->get()) {
+        if (!$request->hasHeader('Authorization') && $this->app->getClient()->getSessionToken()->has()) {
             $request = $request->withAddedHeader(
                 'Authorization',
                 'Basic ' . base64_encode($this->app->getClient()

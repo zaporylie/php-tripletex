@@ -68,4 +68,21 @@ class RedisTokenStorage implements TokenStorageInterface
         $this->client->getRedis()->set($this->key, serialize($token));
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function has()
+    {
+        return $this->client->getRedis()->exists($this->key);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function clear()
+    {
+        $this->client->getRedis()->delete($this->key);
+        return $this;
+    }
 }

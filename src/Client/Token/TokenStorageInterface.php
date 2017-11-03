@@ -17,4 +17,20 @@ interface TokenStorageInterface
      * @return $this
      */
     public function set(SessionToken $token);
+
+    /**
+     * Clears stored token.
+     *
+     * @return $this
+     */
+    public function clear();
+
+    /**
+     * Checks if token is set.
+     *
+     * @return bool
+     *
+     * @todo: And valid?
+     */
+    public function has();
 }

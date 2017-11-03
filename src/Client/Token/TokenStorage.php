@@ -34,4 +34,21 @@ class TokenStorage implements TokenStorageInterface
         $this->token = $token;
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function has()
+    {
+        return $this->token instanceof SessionToken;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function clear()
+    {
+        $this->token = null;
+        return $this;
+    }
 }

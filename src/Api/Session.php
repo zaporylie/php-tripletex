@@ -45,13 +45,26 @@ class Session extends ApiBase
         return (new SessionWhoAmI($this->app))->call($sessionWhoAmI);
     }
 
+    /**
+     * @param null $token
+     *
+     * @return bool
+     */
     public function delete($token = null)
     {
         $sessionDelete = new RequestSessionDelete();
-        if (!isset($token)) {
+        if (!isset($token) && $this->app->getClient()->getSessionToken()->has()) {
             $token = $this->app->getClient()->getSessionToken()->get()->getToken();
+            $default = true;
         }
         $sessionDelete->setToken($token);
-        return (new SessionDelete($this->app))->call($sessionDelete);
+        $response = (new SessionDelete($this->app))->call($sessionDelete);
+
+        if ($response && !empty($default)) {
+            // Reset token.
+            $this->app->getClient()->getSessionToken()->clear();
+        }
+
+        return $response;
     }
 }
