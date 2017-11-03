@@ -3,7 +3,9 @@
 include __DIR__ . '/../vendor/autoload.php';
 
 try {
-    $client = new \zaporylie\Tripletex\Client\TripletexClient();
+    $client = new \zaporylie\Tripletex\Client\TripletexClient([
+      'session_token' => new \zaporylie\Tripletex\Client\Token\RedisTokenStorage(new \Blablacar\Redis\Client())
+    ]);
     $app = new \zaporylie\Tripletex\Tripletex($client);
 
     // Access session API.
