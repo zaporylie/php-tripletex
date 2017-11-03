@@ -53,7 +53,7 @@ class SessionCreate extends ResourceBase implements ResourceInterface
         );
 
         // Save token in client.
-        $this->app->getClient()->setSessionToken($responseObject->getValue()->getToken());
+        $this->app->getClient()->getSessionToken()->set($responseObject->getValue());
 
         return $responseObject;
     }
