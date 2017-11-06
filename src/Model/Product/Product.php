@@ -120,4 +120,112 @@ class Product implements ModelInterface
         $this->number = $number;
         return $this;
     }
+
+    /**
+     * @return int
+     */
+    public function getCostExcludingVatCurrency()
+    {
+        return $this->costExcludingVatCurrency;
+    }
+
+    /**
+     * Gets priceExcludingVatCurrency value.
+     *
+     * @return int
+     */
+    public function getPriceExcludingVatCurrency()
+    {
+        return $this->priceExcludingVatCurrency;
+    }
+
+    /**
+     * Gets priceIncludingVatCurrency value.
+     *
+     * @return int
+     */
+    public function getPriceIncludingVatCurrency()
+    {
+        return $this->priceIncludingVatCurrency;
+    }
+
+    /**
+     * Gets isInactive value.
+     *
+     * @return bool
+     */
+    public function isInactive()
+    {
+        return $this->isInactive;
+    }
+
+    /**
+     * Gets productUnit value.
+     *
+     * @return \zaporylie\Tripletex\Model\Product\ProductUnit
+     */
+    public function getProductUnit()
+    {
+        return $this->productUnit;
+    }
+
+    /**
+     * Gets isStockItem value.
+     *
+     * @return bool
+     */
+    public function isStockItem()
+    {
+        return $this->isStockItem;
+    }
+
+    /**
+     * Gets stockOfGoods value.
+     *
+     * @return int
+     */
+    public function getStockOfGoods()
+    {
+        return $this->stockOfGoods;
+    }
+
+    /**
+     * Gets vatType value.
+     *
+     * @return \zaporylie\Tripletex\Model\Ledger\VatType
+     */
+    public function getVatType()
+    {
+        return $this->vatType;
+    }
+
+    /**
+     * Gets currency value.
+     *
+     * @return \zaporylie\Tripletex\Model\Currency\Currency
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     * Gets department value.
+     *
+     * @return \zaporylie\Tripletex\Model\Department\Department
+     */
+    public function getDepartment()
+    {
+        return $this->department;
+    }
+
+    /**
+     * Gets account value.
+     *
+     * @return \zaporylie\Tripletex\Model\Ledger\Account
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
 }
