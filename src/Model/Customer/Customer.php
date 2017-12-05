@@ -166,7 +166,7 @@ class Customer implements ModelInterface
      *
      * @return $this
      */
-    public function setDeliveryAddress(Address $deliveryAddress)
+    public function setDeliveryAddress(Address $deliveryAddress = null)
     {
         $this->deliveryAddress = $deliveryAddress;
         return $this;
@@ -350,7 +350,7 @@ class Customer implements ModelInterface
      *
      * @return $this
      */
-    public function setPhysicalAddress(Address $physicalAddress)
+    public function setPhysicalAddress(Address $physicalAddress = null)
     {
         $this->physicalAddress = $physicalAddress;
         return $this;
@@ -373,7 +373,7 @@ class Customer implements ModelInterface
      *
      * @return $this
      */
-    public function setPostalAddress(Address $postalAddress)
+    public function setPostalAddress(Address $postalAddress = null)
     {
         $this->postalAddress = $postalAddress;
         return $this;

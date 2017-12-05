@@ -380,7 +380,7 @@ class Order implements ModelInterface
      *
      * @return $this
      */
-    public function setDeliveryAddress(Address $deliveryAddress)
+    public function setDeliveryAddress(Address $deliveryAddress = null)
     {
         $this->deliveryAddress = $deliveryAddress;
         return $this;
