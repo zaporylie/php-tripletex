@@ -22,6 +22,7 @@ class Customer extends ApiBase
     {
         $request = new RequestCustomerList();
         // @todo: Pass options.
+        $request->setCustomerAccountNumber(isset($options['customerAccountNumber']) ? $options['customerAccountNumber'] : null);
         $resource = new CustomerList($this->app);
         return $resource->call($request);
     }
