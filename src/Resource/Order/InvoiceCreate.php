@@ -31,7 +31,7 @@ class InvoiceCreate extends ResourceBase implements ResourceInterface
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
             $this->getMethod(),
-            $this->getPath().'?'.http_build_query([
+            $this->getPath($requestObject->getOrderId()).'?'.http_build_query([
                 'orderId' => $requestObject->getOrderId(),
                 'invoiceDate' => $requestObject->getInvoiceDate()->format('c'),
                 'sendToCustomer' => $requestObject->getSendToCustomer(),
