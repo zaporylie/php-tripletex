@@ -19,7 +19,7 @@ class InvoicePayment extends ResourceBase implements ResourceInterface
     /**
      * @var string
      */
-    protected $path = '/invoice/:payment';
+    protected $path = '/invoice/{id}/:payment';
 
     /**
      * @param \zaporylie\Tripletex\Model\Invoice\RequestInvoicePayment $requestObject
@@ -31,7 +31,7 @@ class InvoicePayment extends ResourceBase implements ResourceInterface
         /** @var \Psr\Http\Message\RequestInterface $request */
         $request = $this->app->getClient()->messageFactoryDiscovery()->createRequest(
             $this->getMethod(),
-            $this->getPath().'?'.http_build_query([
+            $this->getPath($requestObject->getInvoiceId()).'?'.http_build_query([
             'invoiceId' => $requestObject->getInvoiceId(),
             'paymentDate' => $requestObject->getPaymentDate()->format('c'),
             'paymentTypeId' => $requestObject->getPaymentTypeId(),
