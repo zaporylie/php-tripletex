@@ -19,7 +19,7 @@ class InvoiceCreate extends ResourceBase implements ResourceInterface
     /**
      * @var string
      */
-    protected $path = '/order/:invoice';
+    protected $path = '/order/{id}/:invoice';
 
     /**
      * @param \zaporylie\Tripletex\Model\Order\RequestInvoiceCreate $requestObject
