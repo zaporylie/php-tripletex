@@ -38,4 +38,14 @@ class PaymentType implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Ledger\VatType")
      */
     protected $vatType; // (VatType, optional)
+
+    /**
+     * Gets description value.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }
