@@ -33,7 +33,7 @@ https://tripletex.no/v2-docs
 - department
 - employee
 - employee/entitlement
-- inventory
+- ~~inventory~~
 - ~~invoice~~
 - ~~invoice/paymentType~~
 - ledger

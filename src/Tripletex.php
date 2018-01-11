@@ -6,6 +6,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
+use zaporylie\Tripletex\Api\Inventory;
 use zaporylie\Tripletex\Api\Invoice;
 use zaporylie\Tripletex\Api\Order;
 use zaporylie\Tripletex\Api\OrderLine;
@@ -125,5 +126,13 @@ class Tripletex
     public function ledger()
     {
         return new Ledger($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Inventory
+     */
+    public function inventory()
+    {
+        return new Inventory($this);
     }
 }
