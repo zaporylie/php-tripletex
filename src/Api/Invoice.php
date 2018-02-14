@@ -8,6 +8,7 @@ use zaporylie\Tripletex\Model\Invoice\RequestInvoiceList;
 use zaporylie\Tripletex\Model\Invoice\Invoice as InvoiceModel;
 use zaporylie\Tripletex\Model\Invoice\RequestInvoicePayment;
 use zaporylie\Tripletex\Model\Invoice\RequestInvoicePdf;
+use zaporylie\Tripletex\Model\Invoice\RequestInvoiceSend;
 use zaporylie\Tripletex\Model\Invoice\RequestPaymentTypeDetails;
 use zaporylie\Tripletex\Model\Invoice\RequestPaymentTypeList;
 use zaporylie\Tripletex\Resource\Invoice\InvoiceCreate;
@@ -15,6 +16,7 @@ use zaporylie\Tripletex\Resource\Invoice\InvoiceDetails;
 use zaporylie\Tripletex\Resource\Invoice\InvoiceList;
 use zaporylie\Tripletex\Resource\Invoice\InvoicePayment;
 use zaporylie\Tripletex\Resource\Invoice\InvoicePdf;
+use zaporylie\Tripletex\Resource\Invoice\InvoiceSend;
 use zaporylie\Tripletex\Resource\Invoice\PaymentTypeDetails;
 use zaporylie\Tripletex\Resource\Invoice\PaymentTypeList;
 
@@ -101,6 +103,22 @@ class Invoice extends ApiBase
         $request->setId($id);
         // @todo: Pass options.
         $resource = new InvoicePdf($this->app);
+        return $resource->call($request);
+    }
+
+    /**
+     * @param $id
+     * @param array $options
+     *
+     * @return string
+     */
+    public function sendInvoice($id, $sendType = 'EMAIL', $options = [])
+    {
+        $request = new RequestInvoiceSend();
+        $request->setId($id);
+        $request->setSendType($sendType);
+        // @todo: Pass options.
+        $resource = new InvoiceSend($this->app);
         return $resource->call($request);
     }
 
