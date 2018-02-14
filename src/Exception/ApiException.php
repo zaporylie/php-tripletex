@@ -43,9 +43,9 @@ class ApiException extends \Exception
     protected $developerMessage;
 
     /**
-     * @var string
+     * @var \Doctrine\Common\Collections\ArrayCollection|\zaporylie\Tripletex\Exception\ValidationError[]
      *
-     * @Serializer\Type("array<zaporylie\Tripletex\Exception\ValidationError>")
+     * @Serializer\Type("ArrayCollection<zaporylie\Tripletex\Exception\ValidationError>")
      */
     protected $validationMessages;
 
@@ -128,7 +128,7 @@ class ApiException extends \Exception
     /**
      * Gets validationMessages value.
      *
-     * @return array
+     * @return \Doctrine\Common\Collections\ArrayCollection|\zaporylie\Tripletex\Exception\ValidationError[]
      */
     public function getValidationMessages()
     {
@@ -138,7 +138,7 @@ class ApiException extends \Exception
     /**
      * Sets validationMessages variable.
      *
-     * @param array $validationMessages
+     * @param \Doctrine\Common\Collections\ArrayCollection|\zaporylie\Tripletex\Exception\ValidationError[] $validationMessages
      *
      * @return $this
      */

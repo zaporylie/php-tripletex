@@ -20,4 +20,12 @@ class ValidationError extends \InvalidArgumentException
      * @Serializer\Type("string")
      */
     protected $field;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->field . ': ' . $this->message;
+    }
 }
