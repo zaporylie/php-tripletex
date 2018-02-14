@@ -27,7 +27,8 @@
     "php-http/discovery": "^1.0",
     "php-http/message": "^1.0",
     "php-http/client-implementation": "^1.0",
-    "doctrine/cache": "^1.6"
+    "doctrine/cache": "^1.6",
+    "doctrine/collections": "^1.4"
   },
   "require-dev": {
     "php-http/guzzle6-adapter": "^1.0",
