@@ -2,6 +2,7 @@
 
 namespace zaporylie\Tripletex\Exception;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class ApiException extends \Exception
@@ -138,7 +139,7 @@ class ApiException extends \Exception
     /**
      * Sets validationMessages variable.
      *
-     * @param \Doctrine\Common\Collections\ArrayCollection|\zaporylie\Tripletex\Exception\ValidationError[] $validationMessages
+     * @param ArrayCollection|ValidationError[] $validationMessages
      *
      * @return $this
      */
