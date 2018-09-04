@@ -10,9 +10,9 @@ class ResponseProjectList extends ListBase implements ModelInterface
 {
 
     /**
-     * @var \zaporylie\Tripletex\Model\Product\Product[]
+     * @var \zaporylie\Tripletex\Model\Project\Project[]
      *
-     * @\JMS\Serializer\Annotation\Type("array<zaporylie\Tripletex\Model\Product\Product>")
+     * @\JMS\Serializer\Annotation\Type("array<zaporylie\Tripletex\Model\Project\Project>")
      */
     protected $values;
 

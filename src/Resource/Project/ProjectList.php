@@ -46,7 +46,7 @@ class ProjectList extends ResourceBase implements ResourceInterface
         // Get response.
         $body = $response->getBody()->getContents();
 
-        /** @var \zaporylie\Tripletex\Model\Product\ResponseProductList $responseObject */
+        /** @var \zaporylie\Tripletex\Model\Project\ResponseProjectList $responseObject */
         // Deserialize response.
         $responseObject = $this->app->getSerializer()->deserialize(
             $body,
