@@ -20,5 +20,4 @@ class Project extends ApiBase
         $resource = new ProjectList($this->app);
         return $resource->call($request);
     }
-
 }
