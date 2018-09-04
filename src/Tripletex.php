@@ -16,6 +16,7 @@ use zaporylie\Tripletex\Api\Address;
 use zaporylie\Tripletex\Api\Customer;
 use zaporylie\Tripletex\Api\Ledger;
 use zaporylie\Tripletex\Client\TripletexClient;
+use zaporylie\Tripletex\Model\Project\Project;
 
 class Tripletex
 {
@@ -78,6 +79,14 @@ class Tripletex
     public function product()
     {
         return new Product($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Project
+     */
+    public function project()
+    {
+        return new Api\Project($this);
     }
 
     /**
