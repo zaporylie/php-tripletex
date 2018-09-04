@@ -49,6 +49,13 @@ class Project implements ModelInterface
     protected $isClosed;
 
     /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+    protected $isOffer;
+
+    /**
      * @return ProjectCategory
      */
     public function getCategory()
@@ -72,5 +79,13 @@ class Project implements ModelInterface
     public function isClosed()
     {
         return $this->isClosed;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOffer()
+    {
+        return $this->isOffer;
     }
 }
