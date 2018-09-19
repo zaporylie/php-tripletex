@@ -54,4 +54,14 @@ class Project implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Customer\Customer")
      */
     protected $customer; // (Customer, optional)
+    
+    /**
+     * Gets description value.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }
