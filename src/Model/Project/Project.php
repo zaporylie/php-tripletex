@@ -40,10 +40,18 @@ class Project implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Project\ProjectCategory")
      */
     protected $projectCategory; // (ProjectCategory, optional),
+    
     /**
      * @var string
      *
      * @Serializer\Type("string")
      */
-    protected $description; // (string, optional)
+    protected $description; // (string, optional),
+
+    /**
+     * @var \zaporylie\Tripletex\Model\Customer\Customer
+     *
+     * @Serializer\Type("zaporylie\Tripletex\Model\Customer\Customer")
+     */
+    protected $customer; // (Customer, optional)
 }
