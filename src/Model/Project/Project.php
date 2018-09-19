@@ -39,5 +39,11 @@ class Project implements ModelInterface
      *
      * @Serializer\Type("zaporylie\Tripletex\Model\Project\ProjectCategory")
      */
-    protected $projectCategory; // (ProjectCategory, optional)
+    protected $projectCategory; // (ProjectCategory, optional),
+    /**
+     * @var string
+     *
+     * @Serializer\Type("string")
+     */
+    protected $description; // (string, optional)
 }
