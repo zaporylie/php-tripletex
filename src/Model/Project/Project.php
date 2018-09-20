@@ -56,7 +56,7 @@ class Project implements ModelInterface
     protected $customer; // (Customer, optional)
     
     /**
-     * Gets accountManager value.
+     * Gets projectManager value.
      *
      * @return \zaporylie\Tripletex\Model\Employee\Employee
      */
