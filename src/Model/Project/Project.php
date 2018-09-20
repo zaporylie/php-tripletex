@@ -56,6 +56,16 @@ class Project implements ModelInterface
     protected $customer; // (Customer, optional)
     
     /**
+     * Gets accountManager value.
+     *
+     * @return \zaporylie\Tripletex\Model\Employee\Employee
+     */
+    public function getProjectManager()
+    {
+        return $this->projectManager;
+    }
+    
+    /**
      * Gets description value.
      *
      * @return string
