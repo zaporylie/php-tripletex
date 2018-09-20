@@ -64,4 +64,14 @@ class Project implements ModelInterface
     {
         return $this->description;
     }
+
+    /**
+     * Gets customer value.
+     *
+     * @return \zaporylie\Tripletex\Model\Customer\Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
 }
