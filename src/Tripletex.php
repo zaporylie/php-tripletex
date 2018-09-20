@@ -11,6 +11,7 @@ use zaporylie\Tripletex\Api\Invoice;
 use zaporylie\Tripletex\Api\Order;
 use zaporylie\Tripletex\Api\OrderLine;
 use zaporylie\Tripletex\Api\Product;
+use zaporylie\Tripletex\Api\Employee;
 use zaporylie\Tripletex\Api\Session;
 use zaporylie\Tripletex\Api\Address;
 use zaporylie\Tripletex\Api\Customer;
@@ -78,6 +79,14 @@ class Tripletex
     public function product()
     {
         return new Product($this);
+    }
+
+    /**
+     * @return \zaporylie\Tripletex\Api\Employee
+     */
+    public function employee()
+    {
+        return new Employee($this);
     }
 
     /**
