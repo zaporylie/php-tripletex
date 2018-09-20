@@ -16,7 +16,11 @@ class TripletexClient
     /**
      * API's base URL.
      */
-    const BASE_URL = 'https://tripletex.no/v2';
+
+    /**
+     * @var string
+     */
+    public static $BASE_URL = 'https://tripletex.no/v2';
 
     /**
      * @var \Http\Client\HttpClient|\Http\Client\HttpAsyncClient
@@ -45,6 +49,7 @@ class TripletexClient
      */
     public function __construct(array $options = [])
     {
+        $this->setBaseUrl($options['production'] ?? true);
         $this->setHttpClient(isset($options['http_client']) ? $options['http_client'] : null);
         $this->setSessionToken(isset($options['session_token']) ? $options['session_token'] : null);
         $this->setCompanyId(isset($options['company_id']) ? $options['company_id'] : 0);
@@ -55,7 +60,16 @@ class TripletexClient
      */
     public static function getBaseUrl()
     {
-        return self::BASE_URL;
+        return self::$BASE_URL;
+    }
+
+    /**
+     * @return string
+     */
+    private function setBaseUrl($production)
+    {
+        self::$BASE_URL = $production ? 'https://tripletex.no/v2' : 'https://api.tripletex.io/v2';
+        return self;
     }
 
     /**
