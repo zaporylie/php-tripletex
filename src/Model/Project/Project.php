@@ -40,7 +40,7 @@ class Project implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Project\ProjectCategory")
      */
     protected $projectCategory; // (ProjectCategory, optional),
-    
+
     /**
      * @var string
      *
@@ -54,7 +54,30 @@ class Project implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Customer\Customer")
      */
     protected $customer; // (Customer, optional)
-    
+
+    /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+    protected $isClosed; // (boolean, optional),
+
+    /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+
+    protected $isInternal; // (boolean) Must be set to true. ,
+
+    /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+    protected $isOffer; // (boolean, optional, read only),
+
+
     /**
      * Gets projectManager value.
      *
@@ -64,7 +87,7 @@ class Project implements ModelInterface
     {
         return $this->projectManager;
     }
-    
+
     /**
      * Gets description value.
      *
@@ -83,5 +106,35 @@ class Project implements ModelInterface
     public function getCustomer()
     {
         return $this->customer;
+    }
+
+    /**
+     * Gets isClosed value.
+     *
+     * @return bool
+     */
+    public function getIsClosed()
+    {
+        return $this->isClosed;
+    }
+
+    /**
+     * Gets isInternal value.
+     *
+     * @return bool
+     */
+    public function getIsInternal()
+    {
+        return $this->isInternal;
+    }
+
+    /**
+     * Gets isOffer value.
+     *
+     * @return bool
+     */
+    public function getIsOffer()
+    {
+        return $this->isOffer;
     }
 }
