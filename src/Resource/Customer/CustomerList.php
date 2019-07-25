@@ -34,6 +34,8 @@ class CustomerList extends ResourceBase implements ResourceInterface
             'id' => $requestObject->getId(),
             'customerAccountNumber' => $requestObject->getCustomerAccountNumber(),
             'organizationNumber' => $requestObject->getOrganizationNumber(),
+            'email' => $requestObject->getEmail(),
+            'invoiceEmail' => $requestObject->getInvoiceEmail(),
             'isInactive' => $requestObject->getIsInactive(),
             'accountManagerId' => $requestObject->getAccountManagerId(),
             'from' => $requestObject->getFrom(),
