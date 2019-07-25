@@ -27,6 +27,11 @@ class Customer extends ApiBase
               ? $options['customerAccountNumber']
               : null
         );
+        $request->setOrganizationNumber(
+            isset($options['organizationNumber'])
+              ? $options['organizationNumber']
+              : null
+        );
         $resource = new CustomerList($this->app);
         return $resource->call($request);
     }

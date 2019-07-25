@@ -33,6 +33,7 @@ class CustomerList extends ResourceBase implements ResourceInterface
             $this->getPath().'?'.http_build_query([
             'id' => $requestObject->getId(),
             'customerAccountNumber' => $requestObject->getCustomerAccountNumber(),
+            'organizationNumber' => $requestObject->getOrganizationNumber(),
             'isInactive' => $requestObject->getIsInactive(),
             'accountManagerId' => $requestObject->getAccountManagerId(),
             'from' => $requestObject->getFrom(),
