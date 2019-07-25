@@ -55,6 +55,79 @@ class RequestCustomerList extends RequestListBase implements ModelInterface
         return $this;
     }
 
+
+    /**
+     * Gets organizationNumber value.
+     *
+     * @return string
+     */
+    public function getOrganizationNumber()
+    {
+        return $this->organizationNumber;
+    }
+
+    /**
+     * Sets organizationNumber variable.
+     *
+     * @param string $organizationNumber
+     *
+     * @return $this
+     */
+    public function setOrganizationNumber($organizationNumber)
+    {
+        $this->organizationNumber = $organizationNumber;
+        return $this;
+    }
+
+
+    /**
+     * Gets email value.
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Sets email variable.
+     *
+     * @param string $email
+     *
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+
+    /**
+     * Gets invoiceEmail value.
+     *
+     * @return string
+     */
+    public function getInvoiceEmail()
+    {
+        return $this->invoiceEmail;
+    }
+
+    /**
+     * Sets invoiceEmail variable.
+     *
+     * @param string $invoiceEmail
+     *
+     * @return $this
+     */
+    public function setInvoiceEmail($invoiceEmail)
+    {
+        $this->invoiceEmail = $invoiceEmail;
+        return $this;
+    }
+
+
     /**
      * Gets isInactive value.
      *
