@@ -130,5 +130,4 @@ class Contact implements ModelInterface
         $this->customer = $customer;
         return $this;
     }
-
 }
