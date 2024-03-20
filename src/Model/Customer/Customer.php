@@ -127,6 +127,26 @@ class Customer implements ModelInterface
     protected $deliveryAddress; // (Address, optional)
 
     /**
+     * @var string
+     *
+     * @Serializer\Type("string")
+     */
+    protected $invoiceSendMethod; // (invoiceSendMethod, optional)
+
+    /**
+     * Setter for invoiceSendMethod.
+     *
+     * @param string $invoiceSendMethod
+     *
+     * @return $this
+     */
+    public function setInvoiceSendMethod($invoiceSendMethod)
+    {
+        $this->invoiceSendMethod = $invoiceSendMethod;
+        return $this;
+    }
+
+    /**
      * Gets description value.
      *
      * @return string
