@@ -40,4 +40,52 @@ class Project implements ModelInterface
      * @Serializer\Type("zaporylie\Tripletex\Model\Project\ProjectCategory")
      */
     protected $projectCategory; // (ProjectCategory, optional)
+
+    /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+    protected $isClosed;
+
+    /**
+     * @var bool
+     *
+     * @Serializer\Type("boolean")
+     */
+    protected $isOffer;
+
+    /**
+     * @return ProjectCategory
+     */
+    public function getCategory()
+    {
+        return $this->projectCategory;
+    }
+
+    /**
+     * Gets number value.
+     *
+     * @return string
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isClosed()
+    {
+        return $this->isClosed;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOffer()
+    {
+        return $this->isOffer;
+    }
 }
